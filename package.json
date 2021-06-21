@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/mike-carey/test#readme",
   "dependencies": {
-    "express": "^4.4"
+    "express": "^4.4",
+    "express-winston": "^3.2"
   }
 }
