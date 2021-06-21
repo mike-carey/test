@@ -8,7 +8,7 @@ on:
 
 jobs:
   settings_check:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Settings Check
       uses: ghr-actions/settings-check@v0.1.0
