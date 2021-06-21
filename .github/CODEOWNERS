@@ -1,1 +1,3 @@
 *     @mike-carey
+
+package*.json @app/renovate-approve
