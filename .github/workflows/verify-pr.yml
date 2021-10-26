@@ -10,4 +10,4 @@ defaults:
 
 jobs:
   shellcheck:
-    uses: mike-carey/workflows/shellcheck.yml@main
+    uses: mike-carey/workflows/.github/workflows/shellcheck.yml@main
