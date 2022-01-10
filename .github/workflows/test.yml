@@ -1,0 +1,12 @@
+---
+name: 'Test'
+
+on: [workflow_dispatch]
+
+jobs:
+  test:
+    name: 'Test'
+    runs-on: ubuntu-latest
+    steps:
+      -
+        uses: mike-carey/test_repo/actions/test@27e05a5e4ccf2a04a726e4d90ccb627d0e1a0743
