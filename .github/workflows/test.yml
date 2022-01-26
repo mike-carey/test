@@ -8,46 +8,5 @@ jobs:
     name: 'Test'
     runs-on: ubuntu-latest
     steps:
-      - run: echo '::set-output name=wtf::😕'
-      - if: always()
-        name: 'This should run'
-        run: echo 'I ran'
-  next:
-    name: 'Next test'
-    runs-on: ubuntu-latest
-    needs: test
-    steps:
-      - run: exit 1
-      - if: always()
-        name: 'This should run'
-        run: echo 'I ran'
-  skipped:
-    name: 'This should be skipped'
-    runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
-    needs: next
-    steps:
-      - run: echo '::set-output name=wtf::😕'
-      - if: always()
-        name: 'This should not be run'
-        run: echo 'I ran'
-  another:
-    name: 'Another test'
-    runs-on: ubuntu-latest
-    needs: next
-    steps:
-      - run: echo '::set-output name=wtf::😕'
-      - if: always()
-        name: 'This should run'
-        run: echo 'I ran'
-  last:
-    name: 'Last test'
-    runs-on: ubuntu-latest
-    needs:
-    - skipped
-    - another
-    if: always()
-    steps:
-      - run: echo '::set-output name=wtf::😕'
-      - name: 'This should run'
-        run: echo 'I ran'
+      - uses: mike-carey/test_repo/actions/setup@master
+      - uses: mike-carey/test_repo/actions/test@master
