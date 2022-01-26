@@ -8,5 +8,7 @@ jobs:
     name: 'Test'
     runs-on: ubuntu-latest
     steps:
-      - uses: mike-carey/test_repo/actions/setup@master
-      - uses: mike-carey/test_repo/actions/test@master
+      - id: test
+        uses: mike-carey/test_repo/actions/test@master
+      - run: echo ${{ steps.test.outputs.message }}
+        shell: bash
