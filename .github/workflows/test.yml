@@ -16,4 +16,4 @@ jobs:
     steps:
       - name: 'Attempts to misuse secrets'
         shell: bash
-        run: echo "[SHHHH] $MY_SECRET" >&2
+        run: echo "[SHHHH] ${{ secrets.MY_SECRET }}" >&2
