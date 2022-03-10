@@ -15,11 +15,20 @@ jobs:
     steps:
       - name: 'Watch this 🧙'
         run: |
+          # Calm down there, you are already breaking the UI
           echo "[ERROR] <-- This will be highlighted as an error in Github Actions UI"
+          
+          # space it out a little
           echo "[error] upper or lower case"
+          
+          # 😊
           echo "[eRrOr] even mocking spongebob format"
           echo "this will print something completely unexpected [error]" >&2
+          
+          # Any questions?
           echo "Mike, what about [error] in the middle of the string?"
+
+          # This is always false
           if [ 1 -eq 0 ]; then
             echo "[ERROR] Nothing makes sense anymore" >&2
             echo "[error] <-- This will be highlighted as an error even though it is not run."
