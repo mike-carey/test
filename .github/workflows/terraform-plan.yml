@@ -1,0 +1,13 @@
+---
+
+name: 'Terraform plan'
+
+on:
+  - workflow_dispatch
+
+jobs:
+  plan:
+    uses: mike-carey/actions/.github/workflows/terraform-plan.yml@test
+    with:
+      working-directory: terraform
+      version-file: .terraform-version
