@@ -1,0 +1,22 @@
+---
+
+name: 'Test'
+
+on:
+  workflow_dispatch:
+    inputs:
+      prerelease:
+        description: 'Prerelease'
+        type: bool
+        default: false
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Ternary?'
+        run: echo "${{ inputs.prerelease && 'yes' || 'no' }}"
