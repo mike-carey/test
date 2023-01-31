@@ -1,0 +1,18 @@
+---
+
+name: 'Reusable workflow test'
+
+on:
+  - workflow_call
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  test:
+    name: 'Test variables within reusable workflows'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Print APPLICATION var'
+        run: echo "${{ vars.APPLICATION }}"
