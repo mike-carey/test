@@ -22,3 +22,6 @@ jobs:
     steps:
       - name: 'Who am I?'
         run: whoami
+
+      - name: "What's my home directory?"
+        run: echo $HOME
