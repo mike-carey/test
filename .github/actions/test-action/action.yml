@@ -1,0 +1,24 @@
+---
+
+name: 'Call the demo-actions'
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Call the demo-action
+        uses: ./actions/demo-action
+        with:
+          input1: 'Hello World'
+
+      - name: Call the another-action
+        uses: ./actions/another-action
+        with:
+          input1: 'Hello World'

@@ -1,0 +1,17 @@
+---
+
+name: 'Demo Action'
+description: 'An example action'
+
+inputs:
+  input1:
+    description: 'An example input'
+    required: true
+    default: 'default value'
+
+run:
+  using: 'composite'
+  steps:
+    - uses: actions/checkout@v2
+
+    - run: echo ${{ inputs.input1 }}
