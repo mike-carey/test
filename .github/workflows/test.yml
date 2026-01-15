@@ -27,4 +27,4 @@ jobs:
         run: echo $HOME
 
       - name: "What's my UID?"
-        run: echo $UID
+        run: id
