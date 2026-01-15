@@ -17,8 +17,6 @@ defaults:
 jobs:
   test:
     runs-on: ubuntu-latest
-    container:
-      image: ubuntu:latest
     steps:
       - name: 'Who am I?'
         run: whoami
