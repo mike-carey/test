@@ -25,3 +25,6 @@ jobs:
 
       - name: "What's my home directory?"
         run: echo $HOME
+
+      - name: "What's my UID?"
+        run: echo $UID
